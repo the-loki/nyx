@@ -1,10 +1,10 @@
 #include <runtime/engine.h>
 
 int main() {
-	fairy::runtime::Engine engine;
+	auto engine = fairy::runtime::Engine::Create();
 
-	if (engine.Initialize()) {
-		engine.Start();
+	if (engine->Initialize()) {
+		engine->Start();
 	}
 
 	return 0;

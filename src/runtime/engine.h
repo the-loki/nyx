@@ -10,16 +10,28 @@
 
 namespace fairy::runtime {
 
-class Engine : public core::NonCopyableAndMovable {
-public:
+namespace gfx {
+class Gfx;
+}
+
+namespace window {
+class Window;
+}
+
+class Engine : public core::NonCopyableAndMovable, public std::enable_shared_from_this<Engine> {
+protected:
 	Engine() = default;
+public:
 	~Engine() = default;
 
-	virtual void Start();
-	virtual bool Initialize();
-
+	void Quit() const;
+	void Start() const;
+	bool Initialize();
+	static std::shared_ptr<Engine> Create();
 public:
+	std::shared_ptr<gfx::Gfx> gfx_ = nullptr;
 	std::shared_ptr<flecs::world> world_ = nullptr;
+	std::shared_ptr<window::Window> window_ = nullptr;
 };
 
 }

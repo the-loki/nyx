@@ -6,6 +6,9 @@
 
 #include <vector>
 #include <memory>
+#include <runtime/gfx/gfx_context.h>
+
+using GfxContext = ::fairy::runtime::gfx::GfxContext;
 
 namespace fairy::runtime::render {
 
