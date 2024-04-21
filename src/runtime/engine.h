@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include <runtime/core/common/type_traits.h>
+#include <runtime/core/type_traits.h>
 #include <memory>
 #include <flecs.h>
 

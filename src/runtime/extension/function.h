@@ -12,7 +12,7 @@
 
 namespace fairy::runtime::render {
 
-static inline void OutputWebGPUError(WGPUErrorType error_type, const char *message, void *) {
+inline void OutputWebGPUError(WGPUErrorType error_type, const char *message, void *) {
 	static const std::unordered_map<WGPUErrorType, const char *> errorTypeLabels = {
 			{WGPUErrorType_Validation, "Validation"},
 			{WGPUErrorType_OutOfMemory, "Out of memory"},
