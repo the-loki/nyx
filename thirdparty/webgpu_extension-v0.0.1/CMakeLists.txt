@@ -1,0 +1,4 @@
+
+add_library(webgpu_extension INTERFACE)
+target_include_directories(webgpu_extension INTERFACE .)
+target_link_libraries(webgpu_extension INTERFACE webgpu)
