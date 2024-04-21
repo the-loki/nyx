@@ -3,12 +3,12 @@
 //
 
 
-#include <runtime/render/component/gfx_context.h>
+#include <runtime/gfx/component/gfx_context.h>
 #include <runtime/window/component/window.h>
 
 using Window = fairy::runtime::window::Window;
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 void SetupSwapChain(GfxContext &ctx, const Window &window) {
 	if (window.size_.x==ctx.swap_chain_size_.x && window.size_.y==ctx.swap_chain_size_.y) {

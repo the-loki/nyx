@@ -7,7 +7,7 @@
 #include <thread>
 #include <runtime/engine.h>
 #include <runtime/window/module.h>
-#include <runtime/render/module.h>
+#include <runtime/gfx/module.h>
 
 namespace fairy::runtime {
 
@@ -22,7 +22,7 @@ bool Engine::Initialize() {
 
 void Engine::Start() {
 	window::InitializeModule(*world_);
-	render::InitializeModule(*world_);
+	gfx::InitializeModule(*world_);
 
 	while (world_->progress()) {
 	}

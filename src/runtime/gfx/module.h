@@ -6,9 +6,9 @@
 #pragma once
 
 #include <flecs.h>
-#include <runtime/render/system.h>
+#include <runtime/gfx/system.h>
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 inline void InitializeModule(flecs::world & world) {
 	Initialize(world);

@@ -9,7 +9,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 struct GfxContext {
 	WGPUDevice device_ = nullptr;

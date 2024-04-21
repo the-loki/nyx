@@ -2,11 +2,9 @@
 // Created by loki on 2024/3/9.
 //
 
-
-
-#include <runtime/render/component/gfx_context.h>
 #include <runtime/extension/function.h>
 #include <runtime/window/component/window.h>
+#include <runtime/gfx/component/gfx_context.h>
 
 #include <glfw3webgpu.h>
 #include <webgpu_extension.h>
@@ -21,7 +19,7 @@
 
 using Window = fairy::runtime::window::Window;
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 void SetupGfxContext(GfxContext &ctx, const Window &window) {
 	using namespace webgpu_extension;

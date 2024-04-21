@@ -10,7 +10,7 @@
 #include <cstdio>
 #include <webgpu/webgpu.h>
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 inline void OutputWebGPUError(WGPUErrorType error_type, const char *message, void *) {
 	static const std::unordered_map<WGPUErrorType, const char *> errorTypeLabels = {

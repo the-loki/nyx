@@ -5,11 +5,11 @@
 
 #pragma once
 
-#include <runtime/render/component/gfx_context.h>
+#include <runtime/gfx/component/gfx_context.h>
 #include <runtime/window/component/window.h>
 #include <flecs.h>
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 using Window = fairy::runtime::window::Window;
 

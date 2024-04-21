@@ -4,7 +4,7 @@
 
 
 #include <runtime/window/component/window.h>
-#include <runtime/render/component/gfx_context.h>
+#include <runtime/gfx/component/gfx_context.h>
 #include <flecs.h>
 
 namespace fairy::runtime::window {
@@ -14,7 +14,7 @@ static void PrintGlfwError(int error, const char *description) {
 }
 
 void SetupGLFWWindow(flecs::entity entity, Window &window) {
-	using GraphicsContext = fairy::runtime::render::GfxContext;
+	using GfxContext = fairy::runtime::gfx::GfxContext;
 
 	glfwSetErrorCallback(PrintGlfwError);
 
@@ -36,7 +36,7 @@ void SetupGLFWWindow(flecs::entity entity, Window &window) {
 	}
 
 	glfwShowWindow(window.window_);
-	entity.set(GraphicsContext{});
+	entity.set(GfxContext{});
 }
 
 }

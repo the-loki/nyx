@@ -2,9 +2,9 @@
 // Created by loki on 2024/3/9.
 //
 
-#include <runtime/render/system.h>
+#include <runtime/gfx/system.h>
 
-namespace fairy::runtime::render {
+namespace fairy::runtime::gfx {
 
 void Initialize(flecs::world & world) {
 	world.system<GfxContext, const Window>().kind(flecs::OnStart).each(SetupGfxContext);
