@@ -30,7 +30,9 @@ bool Engine::Initialize() {
 		return false;
 	}
 
-	render_ = std::make_shared<render::Render>(shared_from_this());
+	auto forwardRender = std::make_shared<render::ForwardRender>(shared_from_this());;
+	render_ = std::dynamic_pointer_cast<render::Render>(forwardRender);
+
 	return true;
 }
 

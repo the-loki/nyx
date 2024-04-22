@@ -8,10 +8,11 @@
 #include <memory>
 #include <vector>
 #include <runtime/runtime.h>
+#include <runtime/core/type_traits.h>
 
 namespace fairy::runtime::render {
 
-class Pass {
+class Pass : public core::NonCopyable {
 public:
 	explicit Pass(std::string name);
 	~Pass() = default;

@@ -6,12 +6,13 @@
 #pragma once
 
 #include <runtime/runtime.h>
+#include <runtime/core/type_traits.h>
 
 namespace fairy::runtime::render {
 
 class RenderGraph;
 
-class Bindable {
+class Bindable : public core::NonCopyable {
 public:
 	virtual void Bind(RenderGraph &rdg) noexcept = 0;
 	virtual ~Bindable() = default;

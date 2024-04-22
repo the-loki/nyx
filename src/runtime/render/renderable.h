@@ -4,9 +4,11 @@
 
 #pragma once
 
+#include <runtime/core/type_traits.h>
+
 namespace fairy::runtime::fairy {
 
-class Renderable {
+class Renderable : public core::NonCopyable {
 public:
 	Renderable() = default;
 	virtual ~Renderable() = default;

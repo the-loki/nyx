@@ -8,10 +8,11 @@
 #include <memory>
 #include <runtime/gfx/gfx_context.h>
 #include <runtime/runtime.h>
+#include <runtime/core/type_traits.h>
 
 namespace fairy::runtime::render {
 
-class RenderGraph {
+class RenderGraph : public core::NonCopyableAndMovable {
 public:
 	explicit RenderGraph(const std::weak_ptr<runtime::Engine> &engine);
 	virtual ~RenderGraph();
