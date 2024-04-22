@@ -24,6 +24,9 @@ class Source;
 class Sink;
 class Pass;
 class Renderable;
+class Bindable;
+class VertexBuffer;
+class IndexBuffer;
 }
 
 }

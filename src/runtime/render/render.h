@@ -6,6 +6,7 @@
 #pragma once
 
 #include <memory>
+#include <optional>
 #include <runtime/core/type_traits.h>
 #include <runtime/runtime.h>
 
@@ -16,7 +17,10 @@ public:
 	explicit Render(const std::weak_ptr<runtime::Engine> &engine);
 	virtual ~Render() = default;
 protected:
+	std::weak_ptr<runtime::Engine> engine_;
 	std::shared_ptr<RenderGraph> rdg_ = nullptr;
+public:
+	[[nodiscard]] std::shared_ptr<gfx::Gfx> get_gfx() const;
 };
 
 class ForwardRender : public Render {

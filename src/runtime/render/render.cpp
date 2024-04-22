@@ -8,7 +8,18 @@
 
 namespace fairy::runtime::render {
 
-Render::Render(const std::weak_ptr<runtime::Engine> &engine) : rdg_(std::make_shared<RenderGraph>(engine)) {
+Render::Render(const std::weak_ptr<runtime::Engine> &engine)
+		: engine_(engine), rdg_(std::make_shared<RenderGraph>(engine)) {
+}
+
+std::shared_ptr<gfx::Gfx> Render::get_gfx() const {
+	auto engine = engine_.lock();
+
+	if (engine) {
+		return engine->gfx_;
+	}
+
+	return nullptr;
 }
 
 ForwardRender::ForwardRender(const std::weak_ptr<runtime::Engine> &engine) : Render(engine) {
