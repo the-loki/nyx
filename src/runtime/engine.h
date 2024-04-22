@@ -7,20 +7,9 @@
 #include <runtime/core/type_traits.h>
 #include <memory>
 #include <flecs.h>
+#include <runtime/runtime.h>
 
 namespace fairy::runtime {
-
-namespace gfx {
-class Gfx;
-}
-
-namespace window {
-class Window;
-}
-
-namespace render {
-class Render;
-}
 
 class Engine : public core::NonCopyableAndMovable, public std::enable_shared_from_this<Engine> {
 protected:
