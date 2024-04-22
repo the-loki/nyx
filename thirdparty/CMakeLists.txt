@@ -66,6 +66,15 @@ set(FLECS_SHARED OFF)
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 add_subdirectory(${FLECS_DIR})
 
+#assimp
+set(ASSIMP_DIR ${CMAKE_SOURCE_DIR}/thirdparty/assimp-5.4.0)
+set(BUILD_SHARED_LIBS_BACKUP ${BUILD_SHARED_LIBS})
+set(BUILD_SHARED_LIBS OFF)
+set(ASSIMP_BUILD_TESTS OFF)
+set(ASSIMP_INSTALL OFF)
+add_subdirectory(${ASSIMP_DIR})
+set(BUILD_SHARED_LIBS ${BUILD_SHARED_LIBS_BACKUP})
+
 
 add_library(fairy_thirdparty)
 target_link_libraries(fairy_thirdparty PUBLIC glm)
@@ -74,5 +83,6 @@ target_link_libraries(fairy_thirdparty PUBLIC webgpu_extension)
 target_link_libraries(fairy_thirdparty PUBLIC glfw)
 target_link_libraries(fairy_thirdparty PUBLIC glfw3webgpu)
 target_link_libraries(fairy_thirdparty PUBLIC imgui)
+target_link_libraries(fairy_thirdparty PUBLIC Taskflow)
 target_link_libraries(fairy_thirdparty PUBLIC Taskflow)
 target_link_libraries(fairy_thirdparty PUBLIC flecs_static)
