@@ -10,8 +10,6 @@
 
 namespace fairy::runtime::render {
 
-class RenderGraph;
-
 class Bindable : public core::NonCopyable {
 public:
 	virtual void bind(RenderGraph &rdg) noexcept = 0;
