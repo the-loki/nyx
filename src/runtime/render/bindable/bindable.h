@@ -17,10 +17,10 @@ public:
 	virtual void bind(RenderGraph &rdg) noexcept = 0;
 	virtual ~Bindable() = default;
 protected:
-	static gfx::GfxContext *GetGfxContext(RenderGraph &rdg) noexcept;
+	static gfx::GfxContext *get_gfx_context(RenderGraph &rdg) noexcept;
 };
 
-inline gfx::GfxContext *Bindable::GetGfxContext(RenderGraph &rdg) noexcept {
+inline gfx::GfxContext *Bindable::get_gfx_context(RenderGraph &rdg) noexcept {
 	return nullptr;
 }
 
