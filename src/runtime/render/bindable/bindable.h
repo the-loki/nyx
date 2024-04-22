@@ -14,7 +14,7 @@ class RenderGraph;
 
 class Bindable : public core::NonCopyable {
 public:
-	virtual void Bind(RenderGraph &rdg) noexcept = 0;
+	virtual void bind(RenderGraph &rdg) noexcept = 0;
 	virtual ~Bindable() = default;
 protected:
 	static gfx::GfxContext *GetGfxContext(RenderGraph &rdg) noexcept;

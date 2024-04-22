@@ -18,8 +18,8 @@ public:
 	~Pass() = default;
 
 protected:
-	void RegisterSink(std::unique_ptr<Sink> sink);
-	void RegisterSource(std::unique_ptr<Source> source);
+	void register_sink(std::unique_ptr<Sink> sink);
+	void register_source(std::unique_ptr<Source> source);
 private:
 	std::string name_;
 	std::vector<std::unique_ptr<Sink>> sinks_;

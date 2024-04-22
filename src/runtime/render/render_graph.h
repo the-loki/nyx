@@ -17,9 +17,9 @@ public:
 	explicit RenderGraph(const std::weak_ptr<runtime::Engine> &engine);
 	virtual ~RenderGraph();
 protected:
-	void AddSink(std::unique_ptr<Sink> sink);
-	void AddPass(std::unique_ptr<Pass> pass);
-	void AddSource(std::unique_ptr<Source> source);
+	void add_sink(std::unique_ptr<Sink> sink);
+	void add_pass(std::unique_ptr<Pass> pass);
+	void add_source(std::unique_ptr<Source> source);
 private:
 	std::weak_ptr<runtime::Engine> engine_;
 	std::vector<std::unique_ptr<Sink>> sinks_;

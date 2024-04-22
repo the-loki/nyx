@@ -11,7 +11,7 @@ static void PrintGlfwError(int error, const char *description) {
 	printf("GLFW Error %d: %s\n", error, description);
 }
 
-bool Window::CreateWindow() {
+bool Window::create_window() {
 	glfwSetErrorCallback(PrintGlfwError);
 
 	if (!glfwInit()) {
@@ -37,7 +37,7 @@ bool Window::CreateWindow() {
 void Window::Update() {
 	if (glfwWindowShouldClose(window_)) {
 		if (auto engine = engine_.lock();engine) {
-			engine->Quit();
+			engine->quit();
 		}
 
 		return;
@@ -47,9 +47,9 @@ void Window::Update() {
 	glfwGetFramebufferSize(window_, &(size_.x), &(size_.y));
 }
 
-bool Window::Initialize(const std::weak_ptr<runtime::Engine> &engine) {
+bool Window::initialize(const std::weak_ptr<runtime::Engine> &engine) {
 	engine_ = engine;
-	return CreateWindow();
+	return create_window();
 }
 
 std::shared_ptr<Window> Window::CreateDefault() {

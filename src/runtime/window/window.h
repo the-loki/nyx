@@ -18,9 +18,9 @@ class Window {
 public:
 	void Update();
 	static std::shared_ptr<Window> CreateDefault();
-	bool Initialize(const std::weak_ptr<runtime::Engine> &engine);
+	bool initialize(const std::weak_ptr<runtime::Engine> &engine);
 protected:
-	bool CreateWindow();
+	bool create_window();
 public:
 	std::string title_;
 	glm::ivec2 size_{};

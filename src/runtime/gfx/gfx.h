@@ -15,10 +15,10 @@ public:
 	Gfx();
 	virtual ~Gfx();
 public:
-	void Update();
-	bool Initialize(const std::weak_ptr<runtime::Engine> &engine);
+	void update();
+	bool initialize(const std::weak_ptr<runtime::Engine> &engine);
 protected:
-	bool CreateGfxContext();
+	bool create_gfx_context();
 private:
 	std::weak_ptr<runtime::Engine> engine_;
 	std::unique_ptr<GfxContext> context_ = nullptr;

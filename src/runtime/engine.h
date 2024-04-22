@@ -8,6 +8,7 @@
 #include <memory>
 #include <flecs.h>
 #include <runtime/runtime.h>
+#include <runtime/framework/component/transform.h>
 
 namespace fairy::runtime {
 
@@ -17,10 +18,10 @@ protected:
 public:
 	~Engine() = default;
 
-	void Quit() const;
-	void Start() const;
-	bool Initialize();
-	static std::shared_ptr<Engine> Create();
+	void quit() const;
+	void start() const;
+	bool initialize();
+	static std::shared_ptr<Engine> create();
 public:
 	std::shared_ptr<gfx::Gfx> gfx_ = nullptr;
 	std::shared_ptr<flecs::world> world_ = nullptr;

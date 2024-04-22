@@ -25,7 +25,7 @@ Gfx::Gfx() : context_(std::make_unique<GfxContext>()) {}
 
 Gfx::~Gfx() = default;
 
-void Gfx::Update() {
+void Gfx::update() {
 	auto engine = engine_.lock();
 
 	if (!engine) {
@@ -58,7 +58,7 @@ void Gfx::Update() {
 	context_->swap_chain_ = wgpuDeviceCreateSwapChain(context_->device_, context_->surface_, &swap_chain_desc);
 }
 
-bool Gfx::CreateGfxContext() {
+bool Gfx::create_gfx_context() {
 	using namespace webgpu_extension;
 
 	auto engine = engine_.lock();
@@ -106,7 +106,7 @@ bool Gfx::CreateGfxContext() {
 		return false;
 	}
 
-	wgpuDeviceSetUncapturedErrorCallback(context_->device_, &OutputWebGPUError, nullptr);
+	wgpuDeviceSetUncapturedErrorCallback(context_->device_, &output_webgpu_error, nullptr);
 
 #ifdef __EMSCRIPTEN__
 	WGPUSurfaceDescriptorFromCanvasHTMLSelector selector = {};
@@ -127,9 +127,9 @@ bool Gfx::CreateGfxContext() {
 	return true;
 }
 
-bool Gfx::Initialize(const std::weak_ptr<runtime::Engine> &engine) {
+bool Gfx::initialize(const std::weak_ptr<runtime::Engine> &engine) {
 	engine_ = engine;
-	return CreateGfxContext();
+	return create_gfx_context();
 }
 
 }

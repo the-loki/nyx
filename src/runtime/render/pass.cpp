@@ -12,11 +12,11 @@ Pass::Pass(std::string name) : name_(std::move(name)) {
 
 }
 
-void Pass::RegisterSink(std::unique_ptr<Sink> sink) {
+void Pass::register_sink(std::unique_ptr<Sink> sink) {
 	sinks_.emplace_back(std::move(sink));
 }
 
-void Pass::RegisterSource(std::unique_ptr<Source> source) {
+void Pass::register_source(std::unique_ptr<Source> source) {
 	sources_.emplace_back(std::move(source));
 }
 

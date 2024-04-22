@@ -10,15 +10,15 @@
 
 namespace fairy::runtime::render {
 
-void RenderGraph::AddSink(std::unique_ptr<Sink> sink) {
+void RenderGraph::add_sink(std::unique_ptr<Sink> sink) {
 	sinks_.emplace_back(std::move(sink));
 }
 
-void RenderGraph::AddPass(std::unique_ptr<Pass> pass) {
+void RenderGraph::add_pass(std::unique_ptr<Pass> pass) {
 	passes_.emplace_back(std::move(pass));
 }
 
-void RenderGraph::AddSource(std::unique_ptr<Source> source) {
+void RenderGraph::add_source(std::unique_ptr<Source> source) {
 	sources_.emplace_back(std::move(source));
 }
 
