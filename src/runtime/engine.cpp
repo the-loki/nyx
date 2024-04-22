@@ -8,6 +8,7 @@
 #include <runtime/engine.h>
 #include <runtime/window/window.h>
 #include <runtime/gfx//gfx.h>
+#include <runtime/render/render.h>
 
 namespace fairy::runtime {
 
@@ -29,6 +30,7 @@ bool Engine::Initialize() {
 		return false;
 	}
 
+	render_ = std::make_shared<render::Render>(shared_from_this());
 	return true;
 }
 

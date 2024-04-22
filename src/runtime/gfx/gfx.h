@@ -6,27 +6,22 @@
 
 #include <memory>
 #include <flecs.h>
-#include <runtime/engine.h>
-#include <runtime/gfx/gfx_context.h>
-
-namespace fairy::runtime {
-class Engine;
-}
+#include <runtime/runtime.h>
 
 namespace fairy::runtime::gfx {
 
 class Gfx {
 public:
-	Gfx() = default;
-	virtual ~Gfx() = default;
+	Gfx();
+	virtual ~Gfx();
 public:
 	void Update();
 	bool Initialize(const std::weak_ptr<runtime::Engine> &engine);
 protected:
 	bool CreateGfxContext();
 private:
-	GfxContext context_;
 	std::weak_ptr<runtime::Engine> engine_;
+	std::unique_ptr<GfxContext> context_ = nullptr;
 };
 
 }

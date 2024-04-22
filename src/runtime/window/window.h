@@ -9,10 +9,8 @@
 #include <GLFW/glfw3.h>
 #include <string_view>
 #include <memory>
+#include <runtime/runtime.h>
 
-namespace fairy::runtime {
-class Engine;
-}
 
 namespace fairy::runtime::window {
 

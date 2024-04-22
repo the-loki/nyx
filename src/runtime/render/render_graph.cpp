@@ -6,6 +6,7 @@
 #include <runtime/render/sink.h>
 #include <runtime/render/pass.h>
 #include <runtime/render/source.h>
+#include <runtime/engine.h>
 
 namespace fairy::runtime::render {
 
@@ -20,5 +21,10 @@ void RenderGraph::AddPass(std::unique_ptr<Pass> pass) {
 void RenderGraph::AddSource(std::unique_ptr<Source> source) {
 	sources_.emplace_back(std::move(source));
 }
+
+RenderGraph::RenderGraph(const std::weak_ptr<runtime::Engine> &engine) : engine_(engine) {
+}
+
+RenderGraph::~RenderGraph() = default;
 
 }

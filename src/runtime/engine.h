@@ -18,6 +18,10 @@ namespace window {
 class Window;
 }
 
+namespace render {
+class Render;
+}
+
 class Engine : public core::NonCopyableAndMovable, public std::enable_shared_from_this<Engine> {
 protected:
 	Engine() = default;
@@ -32,6 +36,7 @@ public:
 	std::shared_ptr<gfx::Gfx> gfx_ = nullptr;
 	std::shared_ptr<flecs::world> world_ = nullptr;
 	std::shared_ptr<window::Window> window_ = nullptr;
+	std::shared_ptr<render::Render> render_ = nullptr;
 };
 
 }

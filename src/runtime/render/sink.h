@@ -11,7 +11,7 @@ namespace fairy::runtime::render {
 class Sink {
 public:
 	explicit Sink(std::string name);
-	~Sink() = default;
+	virtual ~Sink() = default;
 private:
 	std::string name_;
 };

@@ -5,9 +5,7 @@
 
 #pragma once
 
-#include <runtime/gfx/gfx_context.h>
-
-using GfxContext = ::fairy::runtime::gfx::GfxContext;
+#include <runtime/runtime.h>
 
 namespace fairy::runtime::render {
 
@@ -18,10 +16,10 @@ public:
 	virtual void Bind(RenderGraph &rdg) noexcept = 0;
 	virtual ~Bindable() = default;
 protected:
-	static GfxContext *GetGfxContext(RenderGraph &rdg) noexcept;
+	static gfx::GfxContext *GetGfxContext(RenderGraph &rdg) noexcept;
 };
 
-inline GfxContext *Bindable::GetGfxContext(RenderGraph &rdg) noexcept {
+inline gfx::GfxContext *Bindable::GetGfxContext(RenderGraph &rdg) noexcept {
 	return nullptr;
 }
 

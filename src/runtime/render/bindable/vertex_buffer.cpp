@@ -3,6 +3,7 @@
 //
 
 #include <runtime/render/bindable/vertex_buffer.h>
+#include <runtime/render/bindable/bindable.h>
 
 namespace fairy::runtime::render {
 }

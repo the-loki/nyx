@@ -11,7 +11,7 @@ namespace fairy::runtime::render {
 class Source {
 public:
 	explicit Source(std::string name);
-	~Source() = default;
+	virtual ~Source() = default;
 private:
 	std::string name_;
 };

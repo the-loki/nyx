@@ -7,11 +7,9 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <runtime/runtime.h>
 
 namespace fairy::runtime::render {
-
-class Sink;
-class Source;
 
 class Pass {
 public:
