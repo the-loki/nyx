@@ -29,4 +29,10 @@ class VertexBuffer;
 class IndexBuffer;
 }
 
+namespace resource {
+class Asset;
+class MeshAsset;
+class AssetReader;
+}
+
 }

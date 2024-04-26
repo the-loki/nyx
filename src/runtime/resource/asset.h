@@ -5,10 +5,16 @@
 
 #pragma once
 
+#include <string>
+
 namespace fairy::runtime::resource {
 
 class Asset {
-
+public:
+	Asset() = default;
+	virtual ~Asset() = default;
+public:
+	virtual bool load(const std::string &path);
 };
 
 }
