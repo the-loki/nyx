@@ -20,8 +20,8 @@ public:
 protected:
 	bool create_gfx_context();
 private:
+	std::unique_ptr<GfxContext> context_;
 	std::weak_ptr<runtime::Engine> engine_;
-	std::unique_ptr<GfxContext> context_ = nullptr;
 };
 
 }
