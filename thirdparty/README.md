@@ -30,7 +30,6 @@
 - Version: v0.17.2.1 (44d18911dc598104a9d611f8b6128e2620a5f145, 2023)
 - License: MIT
 
-
 ## taskflow
 
 - Upstream: https://github.com/taskflow/taskflow
@@ -43,4 +42,12 @@
 - Upstream: https://github.com/SanderMertens/flecs
 - Version: v3.2.11 (198607d10ab8f8fc44540043271d6e3be019250b, 2024)
 - License: MIT
+
+## assimp
+
+- Upstream: https://github.com/assimp/assimp
+- Version: v5.4.0 (8b9ed34eaa3e6ad24254cb7e058fb9150f66b865, 2024)
+- License: [Assimp License](./AssimpLicense.md)
+
+
 
