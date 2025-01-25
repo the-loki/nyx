@@ -34,3 +34,4 @@
 /.idea/
 /cmake-build-debug-visual-studio/
 /cmake-build-release/
+/build/
