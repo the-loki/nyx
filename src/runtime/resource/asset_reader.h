@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace fairy::runtime::resource {
+namespace leyla::runtime::resource {
 
 class AssetReader {
 

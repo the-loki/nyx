@@ -8,7 +8,7 @@
 #include <flecs.h>
 #include <runtime/runtime.h>
 
-namespace fairy::runtime::gfx {
+namespace leyla::runtime::gfx {
 
 class Gfx {
 public:

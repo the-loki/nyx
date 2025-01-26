@@ -8,7 +8,7 @@
 #include <runtime/render/source.h>
 #include <runtime/engine.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 void RenderGraph::add_sink(std::unique_ptr<Sink> sink) {
 	sinks_.emplace_back(std::move(sink));

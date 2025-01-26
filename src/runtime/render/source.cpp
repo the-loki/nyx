@@ -6,7 +6,7 @@
 
 #include <utility>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 Source::Source(std::string name) : name_(std::move(name)) {
 

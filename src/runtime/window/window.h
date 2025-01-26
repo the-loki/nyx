@@ -7,12 +7,12 @@
 
 #include <glm/glm.hpp>
 #include <GLFW/glfw3.h>
-#include <string_view>
+#include <string>
 #include <memory>
 #include <runtime/runtime.h>
 
 
-namespace fairy::runtime::window {
+namespace leyla::runtime::window {
 
 class Window {
 public:
@@ -25,7 +25,7 @@ public:
 	std::string title_;
 	glm::ivec2 size_{};
 	GLFWwindow *window_ = nullptr;
-	std::weak_ptr<runtime::Engine> engine_;
+	std::weak_ptr<Engine> engine_;
 };
 
 }

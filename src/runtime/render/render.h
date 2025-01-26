@@ -10,7 +10,7 @@
 #include <runtime/core/type_traits.h>
 #include <runtime/runtime.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 class Render : public core::NonCopyableAndMovable {
 public:

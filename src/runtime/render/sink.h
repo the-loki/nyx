@@ -6,7 +6,7 @@
 
 #include <string>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 class Sink {
 public:

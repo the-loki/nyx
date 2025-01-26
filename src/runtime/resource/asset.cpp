@@ -6,7 +6,7 @@
 #include <cassert>
 
 
-namespace fairy::runtime::resource {
+namespace leyla::runtime::resource {
 
 bool Asset::load(const std::string &path) {
 	assert(("Asset load function has not yet been implemented", false));

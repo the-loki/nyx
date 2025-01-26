@@ -6,7 +6,7 @@
 #include <runtime/render/render_graph.h>
 #include <runtime/engine.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 Render::Render(const std::weak_ptr<runtime::Engine> &engine)
 		: engine_(engine), rdg_(std::make_shared<RenderGraph>(engine)) {

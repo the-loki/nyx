@@ -4,7 +4,7 @@
 
 #pragma once
 
-namespace fairy::runtime::core {
+namespace leyla::runtime::core {
 
 class NonCopyable {
 public:

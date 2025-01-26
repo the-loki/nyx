@@ -19,7 +19,7 @@
 
 #endif
 
-namespace fairy::runtime::gfx {
+namespace leyla::runtime::gfx {
 
 Gfx::Gfx() : context_(std::make_unique<GfxContext>()) {}
 

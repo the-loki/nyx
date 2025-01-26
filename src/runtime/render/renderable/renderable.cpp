@@ -4,7 +4,7 @@
 
 #include <runtime/render/renderable/renderable.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 void Renderable::submit() {
 

@@ -6,7 +6,7 @@
 
 #include <runtime/render/bindable/bindable.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 class VertexBuffer : public Bindable {
 

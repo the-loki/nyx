@@ -10,7 +10,7 @@
 #include <runtime/runtime.h>
 #include <runtime/core/type_traits.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 class Pass : public core::NonCopyable {
 public:

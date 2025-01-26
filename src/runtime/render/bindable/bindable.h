@@ -8,7 +8,7 @@
 #include <runtime/runtime.h>
 #include <runtime/core/type_traits.h>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 class Bindable : public core::NonCopyable {
 public:

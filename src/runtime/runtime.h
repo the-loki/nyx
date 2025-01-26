@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace fairy::runtime {
+namespace leyla::runtime {
 class Engine;
 
 namespace gfx {

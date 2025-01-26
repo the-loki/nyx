@@ -8,7 +8,7 @@
 #include <runtime/runtime.h>
 #include <memory>
 
-namespace fairy::runtime::render {
+namespace leyla::runtime::render {
 
 class Renderable : public core::NonCopyable {
 public:

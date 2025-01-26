@@ -9,7 +9,7 @@
 #include <optional>
 #include <iostream>
 
-namespace fairy::runtime::core {
+namespace leyla::runtime::core {
 
 template<typename K, typename T>
 class LRUCache {
