@@ -4,7 +4,7 @@
 int main() {
 	auto engine = leyla::runtime::Engine::create();
 	leyla::runtime::resource::MeshAsset mesh;
-	mesh.load("../assets/models/cube.obj");
+	// mesh.load("../assets/models/cube.obj");
 
 	if (engine->initialize()) {
 		engine->start();

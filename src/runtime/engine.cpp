@@ -34,7 +34,7 @@ bool Engine::initialize()
     }
 
     auto forward_render = std::make_shared<render::ForwardRender>(shared_from_this());
-    ;
+
     render_ = std::dynamic_pointer_cast<render::Render>(forward_render);
 
     return true;
