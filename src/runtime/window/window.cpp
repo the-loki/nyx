@@ -5,7 +5,7 @@
 #include <runtime/window/window.h>
 #include <runtime/engine.h>
 
-namespace leyla::runtime::window {
+namespace nyx::runtime::window {
 
 static void PrintGlfwError(int error, const char *description) {
 	printf("GLFW Error %d: %s\n", error, description);
@@ -54,7 +54,7 @@ bool Window::initialize(const std::weak_ptr<runtime::Engine> &engine) {
 
 std::shared_ptr<Window> Window::CreateDefault() {
 	auto window = std::make_shared<window::Window>();
-	window->title_ = "leyla";
+	window->title_ = "nyx";
 	window->size_ = {1280, 720};
 
 	return window;

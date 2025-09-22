@@ -8,7 +8,7 @@
 #include <glm/ext.hpp>
 #include <glm/glm.hpp>
 
-namespace leyla::runtime::framework {
+namespace nyx::runtime::framework {
 
 struct Transform {
 	glm::vec3 position_{};

@@ -12,7 +12,7 @@
 #include <runtime/runtime.h>
 
 
-namespace leyla::runtime::window {
+namespace nyx::runtime::window {
 
 class Window {
 public:

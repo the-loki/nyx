@@ -4,7 +4,7 @@
 
 #pragma once
 
-namespace leyla::runtime::core {
+namespace nyx::runtime::core {
 
 class NonCopyable {
 public:

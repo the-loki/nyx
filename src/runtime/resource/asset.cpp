@@ -6,7 +6,7 @@
 #include <cassert>
 
 
-namespace leyla::runtime::resource {
+namespace nyx::runtime::resource {
 
 bool Asset::load(const std::string &path) {
 	assert(("Asset load function has not yet been implemented", false));

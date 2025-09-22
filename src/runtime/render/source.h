@@ -6,7 +6,7 @@
 
 #include <string>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 
 class Source {
 public:

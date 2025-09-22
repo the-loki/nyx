@@ -5,5 +5,5 @@
 #include <runtime/render/bindable/vertex_buffer.h>
 #include <runtime/render/bindable/bindable.h>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 }

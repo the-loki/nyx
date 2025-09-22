@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace leyla::runtime::resource {
+namespace nyx::runtime::resource {
 
 class AssetReader {
 

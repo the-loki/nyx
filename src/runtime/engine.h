@@ -10,7 +10,7 @@
 #include <runtime/runtime.h>
 #include <runtime/framework/component/transform.h>
 
-namespace leyla::runtime {
+namespace nyx::runtime {
 
 class Engine : public core::NonCopyableAndMovable, public std::enable_shared_from_this<Engine> {
 protected:

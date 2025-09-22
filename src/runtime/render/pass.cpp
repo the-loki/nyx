@@ -6,7 +6,7 @@
 #include <runtime/render/sink.h>
 #include <runtime/render/source.h>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 
 Pass::Pass(std::string name) : name_(std::move(name)) {
 

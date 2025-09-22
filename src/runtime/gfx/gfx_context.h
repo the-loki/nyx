@@ -9,7 +9,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-namespace leyla::runtime::gfx {
+namespace nyx::runtime::gfx {
 
 struct GfxContext {
 	WGPUDevice device_ = nullptr;

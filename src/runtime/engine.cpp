@@ -9,7 +9,7 @@
 #include <runtime/window/window.h>
 #include <thread>
 
-namespace leyla::runtime
+namespace nyx::runtime
 {
 
 bool Engine::initialize()
@@ -74,4 +74,4 @@ void Engine::quit() const
     }
 }
 
-} // namespace leyla::runtime
+} // namespace nyx::runtime

@@ -5,7 +5,7 @@
 
 #pragma once
 
-namespace leyla::runtime {
+namespace nyx::runtime {
 class Engine;
 
 namespace gfx {

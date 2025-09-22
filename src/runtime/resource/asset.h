@@ -7,7 +7,7 @@
 
 #include <string>
 
-namespace leyla::runtime::resource {
+namespace nyx::runtime::resource {
 
 class Asset {
 public:

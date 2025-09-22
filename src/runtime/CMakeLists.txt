@@ -1,9 +1,9 @@
-project(leyla_runtime)
+project(nyx_runtime)
 
 file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/src/runtime/*.cpp")
 
-add_library(leyla_runtime)
-target_sources(leyla_runtime PRIVATE ${SOURCE_FILES})
+add_library(nyx_runtime)
+target_sources(nyx_runtime PRIVATE ${SOURCE_FILES})
 
-target_link_libraries(leyla_runtime PUBLIC leyla_thirdparty)
+target_link_libraries(nyx_runtime PUBLIC nyx_thirdparty)
 

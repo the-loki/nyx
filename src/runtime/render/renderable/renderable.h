@@ -8,7 +8,7 @@
 #include <runtime/runtime.h>
 #include <memory>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 
 class Renderable : public core::NonCopyable {
 public:

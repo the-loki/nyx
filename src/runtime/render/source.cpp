@@ -6,7 +6,7 @@
 
 #include <utility>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 
 Source::Source(std::string name) : name_(std::move(name)) {
 

@@ -4,7 +4,7 @@
 
 #include <runtime/render/renderable/renderable.h>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 
 void Renderable::submit() {
 

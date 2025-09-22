@@ -10,7 +10,7 @@
 #include <cstdio>
 #include <webgpu/webgpu.h>
 
-namespace leyla::runtime::gfx {
+namespace nyx::runtime::gfx {
 
 inline void output_webgpu_error(WGPUErrorType error_type, const char *message, void *) {
 	static const std::unordered_map<WGPUErrorType, const char *> errorTypeLabels = {

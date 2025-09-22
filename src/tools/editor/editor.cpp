@@ -2,8 +2,8 @@
 #include <runtime/resource/mesh_asset.h>
 
 int main() {
-	auto engine = leyla::runtime::Engine::create();
-	leyla::runtime::resource::MeshAsset mesh;
+	auto engine = nyx::runtime::Engine::create();
+	nyx::runtime::resource::MeshAsset mesh;
 	// mesh.load("../assets/models/cube.obj");
 
 	if (engine->initialize()) {

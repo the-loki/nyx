@@ -10,7 +10,7 @@
 #include <runtime/core/type_traits.h>
 #include <runtime/runtime.h>
 
-namespace leyla::runtime::render {
+namespace nyx::runtime::render {
 
 class Render : public core::NonCopyableAndMovable {
 public:

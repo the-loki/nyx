@@ -8,7 +8,7 @@
 #include <runtime/resource/asset.h>
 #include <runtime/runtime.h>
 
-namespace leyla::runtime::resource {
+namespace nyx::runtime::resource {
 
 class MeshAsset : public Asset {
 public:
