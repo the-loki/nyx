@@ -61,7 +61,7 @@ set(CMAKE_VERBOSE_MAKEFILE OFF)
 add_subdirectory(${TASK_FLOW_DIR})
 
 #flecs
-set(FLECS_DIR ${CMAKE_SOURCE_DIR}/thirdparty/flecs-3.2.11)
+set(FLECS_DIR ${CMAKE_SOURCE_DIR}/thirdparty/flecs-4.1.1)
 set(FLECS_SHARED OFF)
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 add_subdirectory(${FLECS_DIR})

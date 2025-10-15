@@ -40,7 +40,7 @@
 ## flecs
 
 - Upstream: https://github.com/SanderMertens/flecs
-- Version: v3.2.11 (198607d10ab8f8fc44540043271d6e3be019250b, 2024)
+- Version: v4.1.1 (50ce62afb32e59c26ac0e56a04fd0103569de445, 2025)
 - License: MIT
 
 ## assimp

@@ -1,4 +1,4 @@
-# leyla
+# nyx
 The game engine developed based on WebGPU.
 
 
