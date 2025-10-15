@@ -2,12 +2,11 @@
 // Created by loki on 24-4-26.
 //
 
-
 #pragma once
 
-#include <unordered_map>
-#include <optional>
 #include <iostream>
+#include <optional>
+#include <unordered_map>
 
 namespace nyx::runtime::core {
 
@@ -42,11 +41,11 @@ void LRUCache<K, T>::put(const K &key, const T &value) {
 
 template<typename K, typename T>
 std::optional<T> LRUCache<K, T>::get(const K &key) {
-	if (auto it = cache_.find(key);it!=cache_.end()) {
+	if (auto it = cache_.find(key); it != cache_.end()) {
 		return it->second;
 	}
 
 	return std::nullopt;
 }
 
-}
+}// namespace nyx::runtime::core

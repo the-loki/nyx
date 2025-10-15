@@ -12,8 +12,9 @@ class Sink {
 public:
 	explicit Sink(std::string name);
 	virtual ~Sink() = default;
+
 private:
 	std::string name_;
 };
 
-}
+}// namespace nyx::runtime::render

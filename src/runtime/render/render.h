@@ -2,7 +2,6 @@
 // Created by loki on 24-4-22.
 //
 
-
 #pragma once
 
 #include <memory>
@@ -16,9 +15,11 @@ class Render : public core::NonCopyableAndMovable {
 public:
 	explicit Render(const std::weak_ptr<runtime::Engine> &engine);
 	virtual ~Render() = default;
+
 protected:
 	std::weak_ptr<runtime::Engine> engine_;
 	std::shared_ptr<RenderGraph> rdg_ = nullptr;
+
 public:
 	[[nodiscard]] std::shared_ptr<gfx::Gfx> get_gfx() const;
 };
@@ -35,4 +36,4 @@ public:
 	~DeferredRender() override = default;
 };
 
-}
+}// namespace nyx::runtime::render

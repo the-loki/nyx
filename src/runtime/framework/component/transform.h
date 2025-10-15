@@ -2,7 +2,6 @@
 // Created by loki on 24-4-22.
 //
 
-
 #pragma once
 
 #include <glm/ext.hpp>
@@ -16,4 +15,4 @@ struct Transform {
 	glm::vec3 scale_{1.0f};
 };
 
-}
+}// namespace nyx::runtime::framework

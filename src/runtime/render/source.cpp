@@ -9,8 +9,6 @@
 namespace nyx::runtime::render {
 
 Source::Source(std::string name) : name_(std::move(name)) {
-
 }
 
-}
-
+}// namespace nyx::runtime::render

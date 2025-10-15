@@ -32,4 +32,4 @@ public:
 	NonCopyableAndMovable &operator=(NonCopyableAndMovable &&) = default;
 };
 
-}
+}// namespace nyx::runtime::core

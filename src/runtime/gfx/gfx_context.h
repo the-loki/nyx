@@ -2,12 +2,11 @@
 // Created by loki on 2024/3/5.
 //
 
-
 #pragma once
 
-#include <webgpu/webgpu.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
+#include <webgpu/webgpu.h>
 
 namespace nyx::runtime::gfx {
 
@@ -22,4 +21,4 @@ struct GfxContext {
 	WGPUTextureFormat preferred_texture_format_ = {};
 };
 
-}
+}// namespace nyx::runtime::gfx

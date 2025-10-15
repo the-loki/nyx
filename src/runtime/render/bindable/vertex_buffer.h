@@ -9,7 +9,6 @@
 namespace nyx::runtime::render {
 
 class VertexBuffer : public Bindable {
-
 };
 
-}
+}// namespace nyx::runtime::render

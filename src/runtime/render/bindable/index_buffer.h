@@ -9,7 +9,6 @@
 namespace nyx::runtime::render {
 
 class IndexBuffer : public Bindable {
-
 };
 
-}
+}// namespace nyx::runtime::render

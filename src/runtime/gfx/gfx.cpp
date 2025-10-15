@@ -2,11 +2,11 @@
 // Created by loki on 24-4-22.
 //
 
-#include <runtime/gfx/gfx.h>
-#include <runtime/extension/function.h>
-#include <runtime/window/window.h>
-#include <runtime/gfx/gfx_context.h>
 #include <runtime/engine.h>
+#include <runtime/extension/function.h>
+#include <runtime/gfx/gfx.h>
+#include <runtime/gfx/gfx_context.h>
+#include <runtime/window/window.h>
 
 #include <glfw3webgpu.h>
 #include <webgpu_extension.h>
@@ -34,7 +34,7 @@ void Gfx::update() {
 
 	auto window = engine->window_;
 
-	if (window->size_.x==context_->swap_chain_size_.x && window->size_.y==context_->swap_chain_size_.y) {
+	if (window->size_.x == context_->swap_chain_size_.x && window->size_.y == context_->swap_chain_size_.y) {
 		return;
 	}
 
@@ -45,7 +45,7 @@ void Gfx::update() {
 
 	context_->swap_chain_size_ = window->size_;
 
-	if (window->size_.x==0 || window->size_.y==0) {
+	if (window->size_.x == 0 || window->size_.y == 0) {
 		return;
 	}
 
@@ -115,7 +115,7 @@ bool Gfx::create_gfx_context() {
 	selector.chain.next = nullptr;
 	selector.chain.sType = WGPUSType_SurfaceDescriptorFromCanvasHTMLSelector;
 	WGPUSurfaceDescriptor surface_desc = {};
-	surface_desc.nextInChain = reinterpret_cast<WGPUChainedStruct*>(&selector);
+	surface_desc.nextInChain = reinterpret_cast<WGPUChainedStruct *>(&selector);
 	context_->instance = wgpuCreateInstance(nullptr);
 	context_->surface = wgpuInstanceCreateSurface(context_->instance, &surface_desc);
 #endif
@@ -132,4 +132,4 @@ bool Gfx::initialize(const std::weak_ptr<runtime::Engine> &engine) {
 	return create_gfx_context();
 }
 
-}
+}// namespace nyx::runtime::gfx

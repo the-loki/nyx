@@ -7,7 +7,6 @@
 namespace nyx::runtime::render {
 
 Sink::Sink(std::string name) : name_(std::move(name)) {
-
 }
 
-}
+}// namespace nyx::runtime::render

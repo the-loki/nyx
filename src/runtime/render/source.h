@@ -12,8 +12,9 @@ class Source {
 public:
 	explicit Source(std::string name);
 	virtual ~Source() = default;
+
 private:
 	std::string name_;
 };
 
-}
+}// namespace nyx::runtime::render

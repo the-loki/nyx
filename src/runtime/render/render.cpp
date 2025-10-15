@@ -2,14 +2,14 @@
 // Created by loki on 24-4-22.
 //
 
+#include <runtime/engine.h>
 #include <runtime/render/render.h>
 #include <runtime/render/render_graph.h>
-#include <runtime/engine.h>
 
 namespace nyx::runtime::render {
 
 Render::Render(const std::weak_ptr<runtime::Engine> &engine)
-		: engine_(engine), rdg_(std::make_shared<RenderGraph>(engine)) {
+	: engine_(engine), rdg_(std::make_shared<RenderGraph>(engine)) {
 }
 
 std::shared_ptr<gfx::Gfx> Render::get_gfx() const {
@@ -26,7 +26,6 @@ ForwardRender::ForwardRender(const std::weak_ptr<runtime::Engine> &engine) : Ren
 }
 
 DeferredRender::DeferredRender(const std::weak_ptr<runtime::Engine> &engine) : Render(engine) {
-
 }
 
-}
+}// namespace nyx::runtime::render

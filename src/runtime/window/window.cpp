@@ -2,8 +2,8 @@
 // Created by loki on 24-4-22.
 //
 
-#include <runtime/window/window.h>
 #include <runtime/engine.h>
+#include <runtime/window/window.h>
 
 namespace nyx::runtime::window {
 
@@ -36,7 +36,7 @@ bool Window::create_window() {
 
 void Window::Update() {
 	if (glfwWindowShouldClose(window_)) {
-		if (auto engine = engine_.lock();engine) {
+		if (auto engine = engine_.lock(); engine) {
 			engine->quit();
 		}
 
@@ -60,4 +60,4 @@ std::shared_ptr<Window> Window::CreateDefault() {
 	return window;
 }
 
-}
+}// namespace nyx::runtime::window
