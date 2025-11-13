@@ -2,7 +2,7 @@
 // Created by loki on 24-4-26.
 //
 
-#include <runtime/core/lru.hpp>
+#include <runtime/common/lru.hpp>
 #include <runtime/resource/mesh_asset.h>
 
 namespace nyx::runtime::resource {

@@ -3,12 +3,12 @@
 //
 
 #include <runtime/engine.h>
-#include <runtime/extension/function.h>
 #include <runtime/gfx/gfx.h>
 #include <runtime/gfx/gfx_context.h>
 #include <runtime/window/window.h>
 
 #include <glfw3webgpu.h>
+#include <unordered_map>
 #include <webgpu_extension.h>
 
 #ifdef __EMSCRIPTEN__
@@ -18,6 +18,18 @@
 #include <emscripten/html5_webgpu.h>
 
 #endif
+
+static void output_webgpu_error(WGPUErrorType error_type, const char *message, void *) {
+	static const std::unordered_map<WGPUErrorType, const char *> errorTypeLabels = {
+			{WGPUErrorType_Validation, "Validation"},
+			{WGPUErrorType_OutOfMemory, "Out of memory"},
+			{WGPUErrorType_Unknown, "Unknown"},
+			{WGPUErrorType_DeviceLost, "Device lost"},
+	};
+
+	auto label = errorTypeLabels.find(error_type) != errorTypeLabels.end() ? errorTypeLabels.at(error_type) : "Unknown";
+	printf("%s error: %s\n", label, message);
+}
 
 namespace nyx::runtime::gfx {
 

@@ -6,13 +6,12 @@
 
 #include <flecs.h>
 #include <memory>
-#include <runtime/core/type_traits.h>
 #include <runtime/framework/component/transform.h>
 #include <runtime/runtime.h>
 
 namespace nyx::runtime {
 
-class Engine : public core::NonCopyableAndMovable, public std::enable_shared_from_this<Engine> {
+class Engine : public std::enable_shared_from_this<Engine> {
 protected:
 	Engine() = default;
 

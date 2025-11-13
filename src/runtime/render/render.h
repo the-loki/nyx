@@ -6,12 +6,11 @@
 
 #include <memory>
 #include <optional>
-#include <runtime/core/type_traits.h>
 #include <runtime/runtime.h>
 
 namespace nyx::runtime::render {
 
-class Render : public core::NonCopyableAndMovable {
+class Render  {
 public:
 	explicit Render(const std::weak_ptr<runtime::Engine> &engine);
 	virtual ~Render() = default;

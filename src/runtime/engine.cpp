@@ -35,6 +35,9 @@ bool Engine::initialize() {
 
 	return true;
 }
+std::shared_ptr<Engine> Engine::create() {
+	return std::make_shared<Engine>();
+}
 
 void Engine::start() const {
 	struct CoreHolder {
@@ -51,11 +54,6 @@ void Engine::start() const {
 	}
 
 	world_->quit();
-}
-
-std::shared_ptr<Engine> Engine::create() {
-	const auto engine = new Engine();
-	return std::shared_ptr<Engine>(engine);
 }
 
 void Engine::quit() const {

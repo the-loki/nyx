@@ -9,7 +9,7 @@ class Engine;
 
 namespace gfx {
 class Gfx;
-class GfxContext;
+struct GfxContext;
 }// namespace gfx
 
 namespace window {
