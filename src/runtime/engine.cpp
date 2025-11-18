@@ -35,8 +35,10 @@ bool Engine::initialize() {
 
 	return true;
 }
+
 std::shared_ptr<Engine> Engine::create() {
-	return std::make_shared<Engine>();
+	// ReSharper disable once CppDFAMemoryLeak
+	return std::shared_ptr<Engine>(new Engine());
 }
 
 void Engine::start() const {
