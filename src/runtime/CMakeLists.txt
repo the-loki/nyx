@@ -1,9 +1,9 @@
 project(nyx_runtime)
 
-file(GLOB_RECURSE SOURCE_FILES "${CMAKE_SOURCE_DIR}/src/runtime/*.cpp")
+nyx_collect_all(SOURCE_FILES MODULE_FILES)
 
 add_library(nyx_runtime)
-target_sources(nyx_runtime PRIVATE ${SOURCE_FILES})
+target_sources(nyx_runtime PRIVATE ${SOURCE_FILES} PUBLIC FILE_SET CXX_MODULES FILES ${MODULE_FILES})
 
 target_link_libraries(nyx_runtime PUBLIC nyx_thirdparty)
 
