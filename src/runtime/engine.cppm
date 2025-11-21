@@ -2,16 +2,18 @@
 // Created by loki on 2024/2/16.
 //
 
-#pragma once
+module;
 
 #include <flecs.h>
 #include <memory>
-#include <runtime/framework/component/transform.h>
-#include <runtime/runtime.h>
+
+export module nyx.runtime:engine;
+
+import :fwd;
 
 namespace nyx::runtime {
 
-class Engine : public std::enable_shared_from_this<Engine> {
+export class Engine : public std::enable_shared_from_this<Engine> {
 protected:
 	Engine() = default;
 

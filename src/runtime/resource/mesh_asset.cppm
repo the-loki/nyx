@@ -2,14 +2,17 @@
 // Created by loki on 24-4-26.
 //
 
-#pragma once
+module;
 
-#include <runtime/resource/asset.h>
-#include <runtime/runtime.h>
+#include <string>
+
+export module nyx.runtime:resource.mesh_asset;
+
+import :resource.asset;
 
 namespace nyx::runtime::resource {
 
-class MeshAsset : public Asset {
+export class MeshAsset : public Asset {
 public:
 	MeshAsset() = default;
 

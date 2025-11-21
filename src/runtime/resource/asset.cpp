@@ -2,7 +2,13 @@
 // Created by loki on 24-4-26.
 //
 
-#include <runtime/resource/asset.h>
+module;
+
+#include <string>
+
+module nyx.runtime;
+
+import :resource.asset;
 
 namespace nyx::runtime::resource {
 

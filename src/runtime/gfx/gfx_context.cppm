@@ -2,15 +2,17 @@
 // Created by loki on 2024/3/5.
 //
 
-#pragma once
+module;
 
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <webgpu/webgpu.h>
 
+export module nyx.runtime:gfx.gfx_context;
+
 namespace nyx::runtime::gfx {
 
-struct GfxContext {
+export struct GfxContext {
 	WGPUDevice device_ = nullptr;
 	glm::ivec2 swap_chain_size_{};
 	WGPUSurface surface_ = nullptr;

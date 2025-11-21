@@ -2,8 +2,11 @@
 // Created by loki on 24-4-21.
 //
 
-#include <runtime/engine.h>
-#include <runtime/render/render_graph.h>
+module;
+
+module nyx.runtime;
+
+import :render.render_graph;
 
 namespace nyx::runtime::render {
 

@@ -2,8 +2,16 @@
 // Created by loki on 24-4-22.
 //
 
-#include <runtime/engine.h>
-#include <runtime/window/window.h>
+
+module;
+
+#include <iostream>
+#include <GLFW/glfw3.h>
+
+module nyx.runtime;
+
+import :engine;
+import :window.window;
 
 namespace nyx::runtime::window {
 

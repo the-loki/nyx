@@ -2,13 +2,15 @@
 // Created by loki on 24-4-26.
 //
 
-#pragma once
+module;
 
 #include <string>
 
+export module nyx.runtime:resource.asset;
+
 namespace nyx::runtime::resource {
 
-class Asset {
+export class Asset {
 public:
 	Asset() = default;
 	virtual ~Asset() = default;

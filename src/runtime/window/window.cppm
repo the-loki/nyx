@@ -2,17 +2,20 @@
 // Created by loki on 2024/3/4.
 //
 
-#pragma once
+module;
 
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <memory>
-#include <runtime/runtime.h>
 #include <string>
+
+export module nyx.runtime:window.window;
+
+import :fwd;
 
 namespace nyx::runtime::window {
 
-class Window {
+export class Window {
 public:
 	void Update();
 	static std::shared_ptr<Window> CreateDefault();

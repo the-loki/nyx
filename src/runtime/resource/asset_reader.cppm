@@ -2,11 +2,13 @@
 // Created by loki on 24-4-26.
 //
 
-#pragma once
+module;
+
+export module nyx.runtime:resource.asset_reader;
 
 namespace nyx::runtime::resource {
 
-class AssetReader {
+export class AssetReader {
 };
 
 }// namespace nyx::runtime::resource
