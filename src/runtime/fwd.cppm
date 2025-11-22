@@ -26,6 +26,8 @@ export class Renderable;
 export class Bindable;
 export class VertexBuffer;
 export class IndexBuffer;
+export class RenderResource;
+export class RenderResourceManager;
 }// namespace render
 
 namespace resource {
