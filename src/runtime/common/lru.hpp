@@ -2,17 +2,15 @@
 // Created by loki on 24-4-26.
 //
 
-module;
+#pragma once
 
 #include <iostream>
 #include <optional>
 #include <unordered_map>
 
-export module nyx.runtime:common.lru;
-
 namespace nyx::runtime::core {
 
-export template<typename K, typename T>
+template<typename K, typename T>
 class LRUCache {
 public:
 	LRUCache() {

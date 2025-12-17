@@ -2,18 +2,15 @@
 // Created by loki on 24-4-22.
 //
 
-module;
+#pragma once
 
 #include <memory>
-
-export module nyx.runtime:render.render;
-
-import :fwd;
-import :render.render_graph;
+#include <optional>
+#include <runtime/runtime.h>
 
 namespace nyx::runtime::render {
 
-export class Render  {
+class Render  {
 public:
 	explicit Render(const std::weak_ptr<runtime::Engine> &engine);
 	virtual ~Render() = default;
@@ -26,13 +23,13 @@ public:
 	[[nodiscard]] std::shared_ptr<gfx::Gfx> get_gfx() const;
 };
 
-export class ForwardRender : public Render {
+class ForwardRender : public Render {
 public:
 	explicit ForwardRender(const std::weak_ptr<runtime::Engine> &engine);
 	~ForwardRender() override = default;
 };
 
-export class DeferredRender : public Render {
+class DeferredRender : public Render {
 public:
 	explicit DeferredRender(const std::weak_ptr<runtime::Engine> &engine);
 	~DeferredRender() override = default;

@@ -2,17 +2,15 @@
 // Created by loki on 24-4-22.
 //
 
-module;
+#pragma once
 
+#include <flecs.h>
 #include <memory>
-
-export module nyx.runtime:gfx.gfx;
-
-import :fwd;
+#include <runtime/runtime.h>
 
 namespace nyx::runtime::gfx {
 
-export class Gfx {
+class Gfx {
 public:
 	Gfx();
 	virtual ~Gfx();

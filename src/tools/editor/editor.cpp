@@ -1,4 +1,5 @@
-import nyx.runtime;
+#include <runtime/engine.h>
+#include <runtime/resource/mesh_asset.h>
 
 int main() {
 	auto engine = nyx::runtime::Engine::create();

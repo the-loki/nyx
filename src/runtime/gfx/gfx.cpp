@@ -2,8 +2,10 @@
 // Created by loki on 24-4-22.
 //
 
-
-module;
+#include <runtime/engine.h>
+#include <runtime/gfx/gfx.h>
+#include <runtime/gfx/gfx_context.h>
+#include <runtime/window/window.h>
 
 #include <glfw3webgpu.h>
 #include <unordered_map>
@@ -17,13 +19,6 @@ module;
 
 #endif
 
-module nyx.runtime;
-
-import :engine;
-import :gfx.gfx;
-import :gfx.gfx_context;
-import :window.window;
-
 static void output_webgpu_error(WGPUErrorType error_type, const char *message, void *) {
 	static const std::unordered_map<WGPUErrorType, const char *> errorTypeLabels = {
 			{WGPUErrorType_Validation, "Validation"},
@@ -33,7 +28,7 @@ static void output_webgpu_error(WGPUErrorType error_type, const char *message, v
 	};
 
 	auto label = errorTypeLabels.find(error_type) != errorTypeLabels.end() ? errorTypeLabels.at(error_type) : "Unknown";
-	printf("webgpu %s error: %s\n", label, message);
+	printf("%s error: %s\n", label, message);
 }
 
 namespace nyx::runtime::gfx {

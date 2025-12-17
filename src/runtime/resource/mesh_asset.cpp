@@ -2,14 +2,8 @@
 // Created by loki on 24-4-26.
 //
 
-module;
-
-#include <string>
-
-module nyx.runtime;
-
-import :common.lru;
-import :resource.mesh_asset;
+#include <runtime/common/lru.hpp>
+#include <runtime/resource/mesh_asset.h>
 
 namespace nyx::runtime::resource {
 

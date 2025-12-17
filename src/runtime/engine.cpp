@@ -2,17 +2,12 @@
 // Created by loki on 2024/2/16.
 //
 
-module;
-
-#include <flecs.h>
 #include <iostream>
+#include <runtime/engine.h>
+#include <runtime/gfx/gfx.h>
+#include <runtime/render/render.h>
+#include <runtime/window/window.h>
 #include <thread>
-
-module nyx.runtime;
-
-import :gfx.gfx;
-import :render.render;
-import :window.window;
 
 namespace nyx::runtime {
 
